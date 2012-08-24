@@ -3,16 +3,11 @@ package com.eyupdalan.tcmbkurlar;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.R.layout;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.support.v4.app.NavUtils;
-
 import xmlGetterSaver.*;
 
 public class Kurlar extends Activity {
@@ -20,6 +15,7 @@ public class Kurlar extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_kurlar);
         
         Spinner kurlar=(Spinner) findViewById(R.id.kurlar);
         
@@ -39,7 +35,7 @@ public class Kurlar extends Activity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kurlar.setAdapter(dataAdapter);
         
-        setContentView(R.layout.activity_kurlar);
+        
     }
 
     @Override
