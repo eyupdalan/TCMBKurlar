@@ -33,8 +33,7 @@ public class Kurlar extends Activity {
         
         ArrayAdapter<String> dataAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        kurlar.setAdapter(dataAdapter);
-        
+        kurlar.setAdapter(dataAdapter);        
         
     }
 
