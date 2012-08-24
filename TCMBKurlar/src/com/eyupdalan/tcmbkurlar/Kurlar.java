@@ -1,13 +1,19 @@
 package com.eyupdalan.tcmbkurlar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.R.layout;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.support.v4.app.NavUtils;
+
+import xmlGetterSaver.*;
 
 public class Kurlar extends Activity {
 
@@ -17,6 +23,21 @@ public class Kurlar extends Activity {
         
         Spinner kurlar=(Spinner) findViewById(R.id.kurlar);
         
+        ArrayList<TCMBCurrency> liste=new ArrayList<TCMBCurrency>();
+        EDXmlGetterSaver xgs=new EDXmlGetterSaver("http://www.tcmb.gov.tr/kurlar/today.xml");
+        xgs.GetXmlFromUrl();
+        EDTCMBXmlParser tcmb=new EDTCMBXmlParser(xgs.getXmlDoc());
+        liste=tcmb.GetCurrecies();
+        
+        List<String> list=new ArrayList<String>();
+                
+        for (int i = 0; i < liste.size(); i++) {
+			list.add(liste.get(i).Isim);			
+		}
+        
+        ArrayAdapter<String> dataAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        kurlar.setAdapter(dataAdapter);
         
         setContentView(R.layout.activity_kurlar);
     }
