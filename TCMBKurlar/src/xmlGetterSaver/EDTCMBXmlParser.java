@@ -51,7 +51,7 @@ public class EDTCMBXmlParser {
 			currency.setCrossRateEuro(getDoubleValue(currencyElement, "CrossRateEuro"));
 			currency.setCrossRateOther(getDoubleValue(currencyElement, "CrossRateOther"));
 			currency.setCrossRateUSD(getDoubleValue(currencyElement, "CrossRateUSD"));
-			currency.setCurrencyCode(getTextValue(currencyElement, "CurrencyCode"));
+			currency.setCurrencyCode(getTextAttribute(currencyElement, "CurrencyCode"));
 			currency.setCurrencyName(getTextValue(currencyElement, "CurrencyName"));
 			currency.setForexBuying(getDoubleValue(currencyElement, "ForexBuying"));
 			currency.setForexSelling(getDoubleValue(currencyElement, "ForexSelling"));
@@ -110,6 +110,14 @@ public class EDTCMBXmlParser {
 		}
 
 		return intVal;
+	}
+	
+	private String getTextAttribute(Element ele,String attrName){
+		String textVal=null;
+		
+		textVal=ele.getAttribute(attrName);
+		
+		return textVal;
 	}
 	
 	

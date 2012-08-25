@@ -11,12 +11,117 @@
         android:layout_alignParentTop="true" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/lblCurrencyCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/kurlar"
+        android:layout_below="@id/kurlar"
+        android:layout_marginLeft="10dp"
         android:text="@string/CurrencyCode"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtCurrencyCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kurlar"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/lblCurrencyCode"
+        android:text="@string/txtCurrencyCode"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/lblCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblCurrencyCode"
+        android:layout_marginLeft="10dp"
+        android:text="@string/CurrencyName"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblCurrencyCode"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/lblCurrencyName"
+        android:text="@string/txtCurrencyName"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/lblForexBuying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblCurrencyName"
+        android:layout_marginLeft="10dp"
+        android:text="@string/ForexBuying"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtForexBuying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCurrencyName"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/lblForexBuying"
+        android:text="@string/txtForexBuying"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/lblForexSelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblForexBuying"
+        android:layout_marginLeft="10dp"
+        android:text="@string/ForexSelling"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtForexSelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtForexBuying"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/lblForexSelling"
+        android:text="@string/txtForexSelling"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/lblBanknoteBuying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblForexSelling"
+        android:layout_marginLeft="10dp"
+        android:text="@string/BanknoteBuying"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtBanknoteBuying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtForexSelling"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/lblBanknoteBuying"
+        android:text="@string/txtBanknoteBuying"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/lblBanknoteSelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblBanknoteBuying"
+        android:layout_marginLeft="10dp"
+        android:text="@string/BanknoteSelling"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtBanknoteSelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtBanknoteBuying"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/lblBanknoteSelling"
+        android:text="@string/txtBanknoteSelling"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
